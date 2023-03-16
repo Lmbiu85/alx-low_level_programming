@@ -1,4 +1,3 @@
-gcc
 #include <stdio.h>
 /**
 *main - main entry point
