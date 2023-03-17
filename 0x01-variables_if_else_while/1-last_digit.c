@@ -1,16 +1,16 @@
 #include <stdlib.h>
-
 #include <time.h>
-
+/* more headers goes there*/
 #include <stdio.h>
-
+/*betty style*/
 /**
  * main - prints a text according number
- * Return: Always 0 (success)
- *
+ * 
+ *Return: always 0
  */
 
 int main(void)
+
 {
 	int n; 
 	int lastd;
