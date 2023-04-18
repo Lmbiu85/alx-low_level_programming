@@ -5,7 +5,6 @@
 /**
  * print_dog - function that prints a struct dog
  * @d: the struc to be printed
- * Return: nil if d is NULL
  */
 void print_dog(struct dog *d)
 {
