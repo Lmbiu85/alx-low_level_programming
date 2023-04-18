@@ -6,21 +6,18 @@
  * @name: the name of the dog
  * @age: desribes the age of the dog
  * @owner: the owner of the dog
+ *
+ * Description: struct dog
  */
-typedef struct dog
+
+struct dog
 {
 	char *name;
 	char *owner;
 	float age;
-} dog_t;
+};
 
-/**
- * init_dog - function to initialize dog structure
- * @d: a pointer towards the dog structure to be initialized
- * @name: the name of the dog.
- * @age: the age of the dog.
- * @owner: the owner of the dog.
- */
+typedef struct dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
