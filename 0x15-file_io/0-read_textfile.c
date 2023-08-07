@@ -10,42 +10,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	ssize_t a, j, y;
 	char *buffer;
-	int count;
-	FILE *fp;
 
 	if (filename == NULL)
 		return (0);
 
-	/* Open file */
-	fp = fopen(filename, "r");
-	if (fp == NULL)
-		return (0);
-
-	/* allocate memory in buffer to read contents of fp */
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 		return (0);
 
-	/* read contents of fp */
-	count = fread(buffer, sizeof(char), letters, fp);
-	if (count == 0)
+	a = open(filename, O_RDONLY);
+	j = read(a, buffer, letters);
+	y = write(STDOUT_FILENO, buffer, r);
+
+	if (a == -1 || j == -1 || y == -1 || y != r)
 	{
 		free(buffer);
-		fclose(fp);
 		return (0);
 	}
 
-	/* write to standard output */
-	count = fwrite(buffer, sizeof(char), count, stdout);
-	if (count == -1)
-	{
-		free(buffer);
-		fclose(fp);
-		return (0);
-	}
-	fclose(fp);
 	free(buffer);
+	close(a);
 
-	return (count);
+	return (y);
 }
