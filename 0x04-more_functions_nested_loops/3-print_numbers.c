@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-* print_numbers - print numbers between 0 to 9.
-* 
-* Return: void
-*/
+ * print_numbers - print numbers between 0 to 9.
+ * 
+ * Return: void
+ */
 
 void print_numbers(void)
 {
@@ -14,5 +14,5 @@ void print_numbers(void)
 	{
 		_putchar(c);
 	}
-		_putchar('\n');
+	_putchar('\n');
 }
